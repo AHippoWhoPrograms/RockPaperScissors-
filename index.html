@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <script>
+
+        function computerPlay()
+        {
+            var decisions = ["Rock" , "Paper", "Scissors"];
+            let randIndex = Math.floor(Math.random() * 3);
+            return decisions[randIndex];
+        }
+        function playRound(playerDecision, compDecision)
+        {
+            if(playerDecision == "Rock" && compDecision == "Scissors")
+            {
+                console.log("player wins!");
+            }
+            else if(compDecision == "Rock" && playerDecision == "Scissors")
+            {
+                console.log("computer wins!");
+            }
+            else if(playerDecision == "Scissors" && compDecision == "Paper")
+            {
+                console.log("player wins!");
+            }
+            else if(compDecision == "Scissors" && playerDecision == "Paper")
+            {
+                console.log("computer wins!");
+            }
+            else if(playerDecision == "Paper" && compDecision == "Rock")
+            {
+                console.log("player wins!");
+            }
+            else if(compDecision == "Paper" && playerDecision == "Rock")
+            {
+                console.log("computer wins!");
+            }
+            else
+            {
+                console.log("DRAW!");
+            }
+        }
+
+
+
+
+        let playerDecision = prompt("Paper, scissor, or rock!");
+        let compDecision = computerPlay();
+
+
+    </script>
+</html>
