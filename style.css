@@ -1,0 +1,37 @@
+.containers{
+    display: flex;
+    height: 500px;
+    width:auto;
+}
+.left_container{
+    display: inline-flex;
+    flex:1;
+
+    background-color: crimson;
+    justify-content: center;
+    align-items: center;
+}
+.right_container{
+    display: inline-flex;
+    flex:1;
+
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+.images{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+}
+
+.inner{
+    display:flex;
+    padding: 2vw;
+}
+
+.ComicSans{
+    display: ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
