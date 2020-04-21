@@ -1,3 +1,3 @@
 # RockPaperScissors-
 
-initial commit for rock paper scissors game.
+This is the project for my rock, paper, scissors game.
