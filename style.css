@@ -1,18 +1,24 @@
+.top{
+    background-color: yellow;
+    margin: 0px;
+    padding: 0px;
+
+}
+
 .containers{
     display: flex;
     height: 500px;
     width:auto;
 }
 .left_container{
-    display: inline-flex;
+    display: flex;
     flex:1;
-
     background-color: crimson;
     justify-content: center;
     align-items: center;
 }
 .right_container{
-    display: inline-flex;
+    display: flex;
     flex:1;
 
     background-color: blue;
@@ -27,12 +33,17 @@
 }
 
 .inner{
-    display:flex;
+    display:block;
     padding: 2vw;
+}
+.innermost_container{
+    display: inline-flex;
 }
 
 .ComicSans{
-    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
