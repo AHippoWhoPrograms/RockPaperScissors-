@@ -19,9 +19,9 @@
             <div class = "left_container">
                 <div class="inner">
                     <div class = "innermost_container">
-                        <img class = "images" src="rock.jpg" alt="Rock!">
-                        <img class = "images" src="paper.jpg" alt="Paper!">
-                        <img class = "images" src="scissors.jpg" alt="Scissors!">
+                        <img class = "images" src="rock.jpg" alt="Rock">
+                        <img class = "images" src="paper.jpg" alt="Paper">
+                        <img class = "images" src="scissors.jpg" alt="Scissors">
                     </div>
                     <h2 class="ComicSans">Player!</h2>
                 </div>
@@ -40,13 +40,19 @@
                 </div>    
             </div>
         </div>
+
+
+        <div class = "bottom">
+            <div class = "center_div">
+                <h3></h3>
+            </div>
         </div>
     </body>
 
 
 
 
-  <!--  <script>
+    <script>
 
         function computerPlay()
         {
@@ -58,41 +64,76 @@
         {
             if(playerDecision == "Rock" && compDecision == "Scissors")
             {
-                console.log("player wins!");
+                return "player wins!";
             }
             else if(compDecision == "Rock" && playerDecision == "Scissors")
             {
-                console.log("computer wins!");
+                return "computer wins!";
             }
             else if(playerDecision == "Scissors" && compDecision == "Paper")
             {
-                console.log("player wins!");
+                return "player wins!";
             }
             else if(compDecision == "Scissors" && playerDecision == "Paper")
             {
-                console.log("computer wins!");
+                return "computer wins!";
             }
             else if(playerDecision == "Paper" && compDecision == "Rock")
             {
-                console.log("player wins!");
+                return "player wins!";
             }
             else if(compDecision == "Paper" && playerDecision == "Rock")
             {
-                console.log("computer wins!");
+                return "computer wins!";
             }
             else
             {
-                console.log("DRAW!");
+                return "DRAW!";
             }
         }
 
+        
+
+        //Get all images that the player can click on and add event listeners to them.
+        const images = document.querySelectorAll("div.left_container > div.inner > div.innermost_container > img.images");
+        const counter_text = document.createElement("h2");
+        const bottom = document.querySelector("div.center_div > h3");
+        var playerWins = 0, computerWins = 0;
+        counter_text.textContent = "Player wins: " + playerWins + ", Computer wins: " + computerWins;
+
+        counter_text.style.textAlign = "right";
+        counter_text.style.paddingRight = "2vw";
+        counter_text.style.paddingBottom = "1vw";
+        bottom.style.textAlign = "center";
+        bottom.style.backgroundColor = "purple";
+
+        const parent = document.querySelector(".top");
+
+       
+
+        parent.appendChild(counter_text);
+
+        images.forEach(image => 
+        {
+            image.addEventListener('click', (img) => 
+            {
+                let player_decision = img.srcElement.alt;
+                let computer = computerPlay();
+                
+                winner = playRound(player_decision, computer);
+
+                if(winner === "player wins!") playerWins++;
+                else if(winner === "computer wins!") computerWins++;
+                counter_text.textContent = "Player wins: " + playerWins + ", Computer wins: " + computerWins;
+
+                bottom.textContent = winner.toUpperCase();
+            });
+        });
 
 
-
-        let playerDecision = prompt("Paper, scissor, or rock!");
-        let compDecision = computerPlay();
+        
 
 
     </script>
--->
+
 </html>
